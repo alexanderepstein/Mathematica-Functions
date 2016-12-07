@@ -18,7 +18,7 @@ Extension functions on top of Mathematica's derivative and integral function.
 # Add WalkFuncs.nb
     To be able to use these extension functions as if they were bulit into Mathematica 
     you must copy the notebook file in the same directory as your initilization file 
-    (this is a file thats everytime you start Mathematica).
+    (this is a file thats ran everytime you start Mathematica).
      On Windows: C:\Users\[username]\AppData\Roaming\Mathematica\Kernal\
 
 # Edit init.m
