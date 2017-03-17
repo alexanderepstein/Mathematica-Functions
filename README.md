@@ -26,20 +26,20 @@ Update: Added some conversion functions to go between rectangular and polar form
 # ToRectangularForm
     Get the rectangular form of a polar value by entering
     ToRectangularForm[{magnitude,angle}] where the angle is in degrees
-    
+
 # Add WalkFuncs.nb
     To be able to use these extension functions as if they were built into Mathematica
     you must copy the notebook file in the same directory as your initialization file
-    (this is a file thats ran everytime you start Mathematica).
+    (this is a file that's ran every time you start Mathematica).
      On Windows: C:\Users\[username]\AppData\Roaming\Mathematica\Kernel\
      On Mac: MacHD\Users\[username]\Library\Mathematica\Kernel
 
 # Edit init.m
     In the same path you just placed the WalkFuncs notebook either
     copy the init.m file found here or just add the lines  
-```<< WalkFuncs.wl
-   << ElectricalEngineering.wl ```
+```<< WalkFuncs.wl ```
+
+```<< ElectricalEngineering.wl ```
 
 # The walkD and walkInt is Not original!
 Code found online and slightly tweaked to handle multiple variables and error checking.
- 
