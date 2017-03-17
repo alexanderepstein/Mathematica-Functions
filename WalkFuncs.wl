@@ -33,9 +33,9 @@ walkD::parameterError="Incorrect parameters walkD[function,variable]";
 walkD[f_]:= Message[walkD::parameterError];
 walkD[f_,x_,y_] := walkD[walkD[f,x],y];
 walkD[f_,x_,y_,z_] := walkD[walkD[walkD[f,x],y],z];
-walkD[f_,x_]:=Module[{derivative,oldderivative,k},derivative=d[f,x];displayStart[derivative];
+walkD[f_,x_]:=Module[{derivative,oldderivative,k},derivative=d[f,x];If[Length[{f}] != 1 || Length[{x}] != 1 || x == Null,Message[walkD::parameterError],displayStart[derivative]];
 
-If[Length[{f}] != 1 || Length[{x}] != 1 || x == Null,Message[walkD::parameterError];Abort[];];
+
 While[!FreeQ[derivative,d],oldderivative=derivative;k=0;
 While[oldderivative==derivative,k++;
 If[k>Length@$dRuleNames,Message[walkD::differentationError];
@@ -74,8 +74,7 @@ walkInt::parameterError="Incorrect parameters walkInt[function,variable]";
 walkInt[f_]:= Message[walkInt::parameterError];
 walkInt[f_,x_,y_] := walkInt[walkInt[f,x],y];
 walkInt[f_,x_,y_,z_] := walkInt[walkInt[walkInt[f,x],y],z];
-walkInt[f_,x_]:=Module[{integral,oldintegral,k,leafcounts,ruleused},integral=int[f,x];displayStart[integral];
-If[Length[{f}] != 1 || Length[{x}] != 1 || x==Null,Message[walkInt::parameterError];Abort[];]
+walkInt[f_,x_]:=Module[{integral,oldintegral,k,leafcounts,ruleused},integral=int[f,x];If[Length[{f}] != 1 || Length[{x}] != 1 || x==Null,Message[walkInt::parameterError],displayStart[integral];]
 leafcounts={};
 ruleused="";
 While[!FreeQ[integral,int],If[ruleused=="Product Rule",AppendTo[leafcounts,LeafCount@integral];

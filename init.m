@@ -1,2 +1,3 @@
 (** User Mathematica initialization file **)
-<< WalkFuncs.nb
+<< WalkFuncs.wl
+<< ElectricalEngineering.wl
