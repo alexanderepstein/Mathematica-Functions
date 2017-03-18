@@ -8,7 +8,7 @@ Update: Added some conversion functions to go between rectangular and polar form
     is possible sometimes it does not have the steps to show how it was done.
     In this case you can use the two functions here to get mathematica to show you every step.
 
-    To prevent the tedious repetitive work of converting all my answers into degrees
+    The ElectricalEngineering is useful for calculation AC circuits by facilitating the long a tedious math and conversions with few useful functions
 
 # Derivatives
     To get mathematica to show you how the derivative is done, use walkD[function,var].
@@ -27,7 +27,35 @@ Update: Added some conversion functions to go between rectangular and polar form
     Get the rectangular form of a polar value by entering
     ToRectangularForm[{magnitude,angle}] where the angle is in degrees
 
-# Add WalkFuncs.nb
+# CapacitanceToRectangular
+    Takes a  capacitance and the omega of the voltage/current source from the time domain and converts it to rectangular form
+    Enter it either as
+         CapacitanceToRectangular[capacitance,omega]
+         or
+         CapacitanceToRectangular[capacitance,omega,unit]
+
+# CapacitanceToPolar
+     Takes a  capacitance and the omega of the voltage/current source from the time domain and converts it to polar form in degrees
+     Enter it either as
+          CapacitanceToPolar[capacitance,omega]
+          or
+          CapacitanceToPolar[capacitance,omega,unit]
+
+# InductanceToRectangular
+      Takes an inductance (in Henry's) and the omega of the voltage/current source from the time domain and converts it to rectangular form
+      Enter it either as
+          InductanceToRectangular[inductance,omega]
+          or
+          InductanceToRectangular[inductance,omega,unit]
+
+# InductanceToPolar
+      Takes an inductance and the omega of the voltage/current source from the time domain and converts it to polar form in degrees
+      Enter it either as
+          InductanceToPolar[inductance,omega]
+          or  
+          InductanceToPolar[inductance,omega,unit]
+
+# Add Packages To Mathematica
     To be able to use these extension functions as if they were built into Mathematica
     you must copy the notebook file in the same directory as your initialization file
     (this is a file that's ran every time you start Mathematica).
@@ -35,8 +63,7 @@ Update: Added some conversion functions to go between rectangular and polar form
      On Mac: MacHD\Users\[username]\Library\Mathematica\Kernel
 
 # Edit init.m
-    In the same path you just placed the WalkFuncs notebook either
-    copy the init.m file found here or just add the lines  
+    In the same path you just placed the WalkFuncs & ElectricalEngineering package files either copy the init.m file found here or just add the lines  
 ```<< WalkFuncs.wl ```
 
 ```<< ElectricalEngineering.wl ```
