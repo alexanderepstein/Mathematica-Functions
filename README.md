@@ -1,5 +1,6 @@
 # Mathematica-Functions
 Extension functions on top of Mathematica's derivative and integral function.
+Additional functions that make A.C. circuit analysis faster
 
 Update: Added some conversion functions to go between rectangular and polar form of a number (Everything is done in degrees rather than radians)
 
