@@ -68,4 +68,4 @@ Update: Added some conversion functions to go between rectangular and polar form
 
 ```<< ElectricalEngineering.wl ```
 
-# WalkFuncs Package is not original the basis of that package came from code found online that I slightly tweaked to handle multiple variables and error checking.
+##### WalkFuncs Package is not original the basis of that package came from code found online that I slightly tweaked to handle multiple variables and error checking.
